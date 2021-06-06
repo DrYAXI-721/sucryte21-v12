@@ -34,6 +34,20 @@ client.on("ready", async () => {
 });
 
 //////////
+///////
+
+client.on("ready", () => {
+  setInterval(() => {
+    console.log(`${client.user.username} owner yaxi,
+)}, server ${client.guilds.cache.size}
+  `);
+   client.user.setActivity(
+      `/help | Server ${client.guilds.cache.size} and  Users ${client.users.cache.size}`
+    );
+  }, 15000);
+});
+////////
+
 
 client.on("message", async message => {
   if (message.content.startsWith(prefix + "help")) {
